@@ -33,7 +33,7 @@ def validate_schema(schema_name):
             schema = schema_name()
             errors = schema.validate(request.get_json())
             if errors:
-                raise BadRequest(errors)
+                raise BadRequest(errors
             return f(*args, **kwargs)
         return decorated_function
     return decorator
